@@ -1,4 +1,4 @@
-package com.oz.model;
+package com.oz.model.human;
 
 import java.io.Serializable;
 
@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @Entity
 @Table(name = "humans")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Human implements Serializable{
+public class HumanModelDAO implements Serializable{
 	
 	/**
 	 * 
@@ -29,8 +29,17 @@ public class Human implements Serializable{
 	private String name;
 	@Column(name = "last_name")
 	private String lastName;
-	@Column(name = "edad")
-	private Integer edad;
+	@Column(name = "age")
+	private Integer age;
+	
+	public HumanModelDAO(){}
+	
+	public HumanModelDAO(String name, String lastName, Integer age) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.age = age;
+	}
 	
 	public Long getId() {
 		return id;
@@ -50,18 +59,22 @@ public class Human implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Integer getEdad() {
-		return edad;
+
+	public Integer getAge() {
+		return age;
 	}
-	public void setEdad(Integer edad) {
-		this.edad = edad;
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
 	@Override
 	public String toString() {
-		return "Human [id=" + id + ", name=" + name + ", lastName=" + lastName + ", edad=" + edad + "]";
+		return "HumanModelDAO [id=" + id + ", name=" + name + ", lastName=" + lastName + ", age=" + age + "]";
 	}
 	
 }
