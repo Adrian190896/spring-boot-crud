@@ -1,10 +1,12 @@
 # spring-boot-crud
 
-Hello everyone this is my project where you see a simple CRUD
+Hello everyone this is my project where you see a simple CRUD in springboot
 
-You'll see the swagger documentation in the next link: http://localhost:8080/swagger-ui/index.html#/
+The project runs on port 8080 on localhost
 
-The configuration of the database h2 is in the \Oz\src\main\resources\application.properties
+You'll see the swagger documentation in the next link: http://localhost:8080/swagger-ui/index.html#/ when the porject is running
+
+The configuration of the database h2 is in the \Oz\src\main\resources\application.properties also you can see in the same folder a data.sql file when the project is runing the project runs this file for create the table and some records
 
 user: admin
 
